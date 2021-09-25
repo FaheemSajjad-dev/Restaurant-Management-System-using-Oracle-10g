@@ -1,0 +1,102 @@
+INSERT INTO MANAGER (Manager_ID,Manager_Name,Manager_Contact,Manager_Adress)
+VALUES 
+(456,'Harry','21537','HNO#49 Street 7');
+INSERT INTO MANAGER (Manager_ID,Manager_Name,Manager_Contact,Manager_Adress)
+VALUES 
+(021,'Bill','49512','HNO#14 Street 2');
+INSERT INTO MANAGER (Manager_ID,Manager_Name,Manager_Contact,Manager_Adress)
+VALUES 
+(308,'Sam','60035','HNO#35 Street 5');
+
+
+
+INSERT INTO FOOD_ORDER (Order_ID,No_Of_Items)
+VALUES
+(11,'4');
+INSERT INTO FOOD_ORDER (Order_ID,No_Of_Items)
+VALUES
+(3,'7');
+INSERT INTO FOOD_ORDER (Order_ID,No_Of_Items)
+VALUES
+(19,'2');
+
+
+
+INSERT INTO BILL(Bill_ID,Total_Bill)
+VALUES
+(323,2000);
+INSERT INTO BILL(Bill_ID,Total_Bill)
+VALUES
+(302,3500);
+INSERT INTO BILL(Bill_ID,Total_Bill)
+VALUES
+(301,500);
+
+
+INSERT INTO WAITER(Waiter_ID,Waiter_Name,Waiter_Adress, Waiter_Contact)
+VALUES
+(901,'Joe','HNO#4 Street 1','11537');
+INSERT INTO WAITER(Waiter_ID,Waiter_Name,Waiter_Adress, Waiter_Contact)
+VALUES
+(902,'Neil','HNO#19 Street 3','61537');
+INSERT INTO WAITER(Waiter_ID,Waiter_Name,Waiter_Adress, Waiter_Contact)
+VALUES
+(903,'Kim','HNO#51 Street 7','31537');
+
+
+INSERT INTO CUSTOMER(Customer_ID,Customer_Name,Customer_Contact,Customer_Adress) 
+VALUES
+(707,'Anna','158745','HNO#86 Street 12');
+INSERT INTO CUSTOMER(Customer_ID,Customer_Name,Customer_Contact,Customer_Adress) 
+VALUES
+(702,'George','648745','HNO#33 Street 5');
+INSERT INTO CUSTOMER(Customer_ID,Customer_Name,Customer_Contact,Customer_Adress) 
+VALUES
+(701,'Dexter','321745','HNO#81 Street 12');
+
+
+INSERT INTO CHEF(Chef_ID,Chef_Name,Chef_Adress, Chef_Contact)
+VALUES
+(508,'Sarah','HNO#70 Street 10','40202');
+INSERT INTO CHEF(Chef_ID,Chef_Name,Chef_Adress, Chef_Contact)
+VALUES
+(516,'Xan','HNO#99 Street 13','21202');
+INSERT INTO CHEF(Chef_ID,Chef_Name,Chef_Adress, Chef_Contact)
+VALUES
+(518,'Andy','HNO#73 Street 10','40201');
+
+
+
+INSERT INTO CASHIER(Cashier_ID,Cashier_Name,Cashier_Contact)
+VALUES
+(001,'Billy','35125');
+INSERT INTO CASHIER(Cashier_ID,Cashier_Name,Cashier_Contact)
+VALUES
+(009,'Mario','22125');
+INSERT INTO CASHIER(Cashier_ID,Cashier_Name,Cashier_Contact)
+VALUES
+(005,'Nevas','22132');
+
+
+
+INSERT INTO RESTURANT(Restaurant_ID, Resturant_Name, Resturant_Contact, Resturant_Adress)
+VALUES
+(609, 'SAVOUR FOODS', '64568', 'Street 6');
+INSERT INTO RESTURANT(Resturant_ID, Resturant_Name, Resturant_Contact, Resturant_Adress)
+VALUES
+(602, 'SAVOUR FOODS', '54568', 'Street 3');
+INSERT INTO RESTURANT(Resturant_ID, Resturant_Name, Resturant_Contact, Resturant_Adress)
+VALUES
+(615, 'SAVOUR FOODS', '78968', 'Street 8');
+
+
+
+INSERT INTO MENU(Item_ID, Item_Name, Item_Price)
+VALUES
+(1102, 'Pulao', 240);
+INSERT INTO MENU(Item_ID, Item_Name, Item_Price)
+VALUES
+(1105, 'Chicken Karahi', 1040);
+INSERT INTO MENU(Item_ID, Item_Name, Item_Price)
+VALUES
+(1112, 'Fried Fish', 1540);

@@ -1,0 +1,153 @@
+CREATE TABLE MANAGER(
+Manager_ID int NOT NULL,
+Manager_Name varchar(255) NOT NULL,
+Manager_Contact varchar(255) NOT NULL,
+Manager_Adress varchar(255),
+PRIMARY KEY (Manager_ID)
+);
+
+
+
+
+CREATE TABLE FOOD_ORDER(
+Order_ID int,
+No_Of_Items varchar(255) NOT NULL,
+PRIMARY KEY (Order_ID)
+);
+
+
+
+
+CREATE TABLE BILL(
+Bill_ID int NOT NULL,
+Total_Bill int NOT NULL,
+Order_ID int,
+PRIMARY KEY (Bill_ID)
+);
+
+ALTER TABLE BILL
+ADD FOREIGN KEY (Order_ID) REFERENCES FOOD_ORDER(Order_ID);
+
+
+
+CREATE TABLE WAITER(
+Waiter_ID int NOT NULL,
+Waiter_Name varchar(255) NOT NULL,
+Waiter_Adress varchar(255), 
+Waiter_Contact varchar(255),
+Order_ID int,
+PRIMARY KEY (Waiter_ID)
+);
+
+
+
+ALTER TABLE WAITER
+ADD FOREIGN KEY (Order_ID) REFERENCES FOOD_ORDER(Order_ID);
+
+
+CREATE TABLE CUSTOMER(
+Customer_ID int NOT NULL,
+Customer_Name varchar(255) NOT NULL,
+Customer_Contact varchar(255),
+Customer_Adress varchar(255),
+Bill_ID int, 
+PRIMARY KEY (Customer_ID)
+);
+
+ALTER TABLE CUSTOMER
+ADD FOREIGN KEY (Bill_ID) REFERENCES BILL(Bill_ID);
+
+
+
+CREATE TABLE CHEF(
+Chef_ID int NOT NULL,
+Chef_Name varchar(255) NOT NULL,
+Chef_Adress varchar(255), 
+Chef_Contact varchar(255),
+Order_ID int,
+PRIMARY KEY (Chef_ID)
+);
+
+ALTER TABLE CHEF
+ADD FOREIGN KEY (Order_ID) REFERENCES FOOD_ORDER(Order_ID);
+
+
+
+
+CREATE TABLE CASHIER(
+Cashier_ID int NOT NULL,
+Cashier_Name varchar(255) NOT NULL,
+Cashier_Contact varchar(255),
+PRIMARY KEY (Cashier_ID)
+);
+
+
+CREATE TABLE MENU(
+Item_ID int NOT NULL,
+Item_Name varchar(255) NOT NULL,
+Item_Price int NOT NULL,
+PRIMARY KEY (Item_ID)
+);
+
+
+CREATE TABLE RESTURANT(
+Resturant_ID int NOT NULL,
+Resturant_Name varchar(255) NOT NULL,
+Resturant_Contact varchar(255),
+Resturant_Adress varchar(255),
+Manager_ID int, 
+Chef_ID int,
+Customer_ID int,
+Waiter_ID int,
+Cashier_ID int,
+Item_ID int,     
+PRIMARY KEY (Resturant_ID)
+);
+
+ALTER TABLE RESTURANT
+ADD FOREIGN KEY (Manager_ID) REFERENCES MANAGER(Manager_ID);
+
+ALTER TABLE RESTURANT
+ADD FOREIGN KEY (Chef_ID) REFERENCES CHEF(Chef_ID);
+
+ALTER TABLE RESTURANT
+ADD FOREIGN KEY (Customer_ID) REFERENCES CUSTOMER(Customer_ID);
+
+ALTER TABLE RESTURANT
+ADD FOREIGN KEY (Waiter_ID) REFERENCES WAITER(Waiter_ID);
+
+ALTER TABLE RESTURANT
+ADD FOREIGN KEY (Cashier_ID) REFERENCES CASHIER(Cashier_ID);
+
+ALTER TABLE RESTURANT
+ADD FOREIGN KEY (Item_ID) REFERENCES MENU(Item_ID);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
